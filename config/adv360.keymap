@@ -39,8 +39,9 @@
         bindings = <&kp BACKSPACE>, <&kp DELETE>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
         keep-mods = <(MOD_RSFT)>;
-        };
+    };
   };
+};
 
     keymap {
         compatible = "zmk,keymap";
