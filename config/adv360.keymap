@@ -31,6 +31,14 @@
         flavor = "tap-preferred";
         bindings = <&kp>, <&kp>;
     };
+     bspc_del: backspace_delete {
+        compatible = "zmk,behavior-mod-morph";
+        label = "BACKSPACE_DELETE";
+        #binding-cells = <0>;
+        bindings = <&kp BACKSPACE>, <&kp DELETE>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+  };
   };
 
     keymap {
@@ -43,7 +51,7 @@
           &kp TAB      &kp Q             &kp W     &kp E      &kp R   &kp T            &kp HOME                                                              &kp PAGE_UP   &kp Y   &kp U      &kp I     &kp O     &kp P   &kp BSLH
           &kp ESC      &kp A             &kp S     &kp D      &kp F   &kp G             &kp END  &kp LCTRL  &kp LALT                  &kp LGUI  &kp RCTRL  &kp PAGE_DOWN   &kp H   &kp J      &kp K     &kp L  &kp SEMI    &kp SQT
         &kp LSHFT      &kp Z             &kp X     &kp C      &kp V   &kp B                                    &to 0                     &mo 2                             &kp N   &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp RSHFT
- &kp LEFT_CONTROL  &kp GRAVE  &kp LEFT_COMMAND  &kp LEFT  &kp RIGHT                    &kp BSPC    &kp DEL     &mo 1                     &mo 3  &kp ENTER      &kp SPACE          &kp UP   &kp DOWN  &kp LBKT  &kp RBKT   &kp RWIN
+ &kp LEFT_CONTROL  &kp GRAVE  &kp LEFT_COMMAND  &kp LEFT  &kp RIGHT                    &bspc_del    &kp DEL     &mo 1                     &mo 3  &kp ENTER      &kp SPACE          &kp UP   &kp DOWN  &kp LBKT  &kp RBKT   &kp RWIN
             >;
         };
 
